@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles/slick.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/slick-theme.css" rel="stylesheet" type="text/css"/>
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+            rel="stylesheet"
+    />
+    <link href="styles/styles.less" rel="stylesheet/less" type="text/css"/>
+    <link href="styles/adaptive.less" rel="stylesheet/less" type="text/css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title> Rental company </title>
+</head>
+
+<body>
+
+<!-- pop-up "Request call"-->
+
+<div class="pop-up" id="pop-up-order-call">
+    <div class="pop-up-container">
+
+        <div class="box-golden-top"></div>
+        <div class="pop-up-header"><span class="golden"> Закажите идеальный автомобиль </span> уже сегодня</div>
+
+        <div class="details">
+            <form id="form">
+
+                <div class="loader"></div>
+
+                <div class="select-info">
+                    <input class="border" id="name" name="name" placeholder="Ваше имя" type="text">
+                    <div class="error"> Заполните поле "Ваше имя"</div>
+                </div>
+
+                <div class="select-info">
+                    <input class="border" id="phone" name="phone" placeholder="Ваш телефон" type="text">
+                    <div class="error">Заполните поле "Ваш телефон"</div>
+                </div>
+
+                <button class="btn-pop-up" id="order-call-button" type="submit">Отправить заявку</button>
+
+                <div class="rights">Предоставляя информацию, вы даете согласие на обработку вашей личной информации в
+                    соответствии с нашей политикой конфиденциальности
+                </div>
+
+            </form>
+        </div>
+
+        <div class="message">
+            Спасибо за Вашу заявку. Мы свяжемся с вами в ближайшее время!
+        </div>
+
+        <div class="box-golden-bottom"></div>
+
+    </div>
+</div>
+
+<!--pop-up "Fill up the form"-->
+
+<div class="pop-up" id="order-form">
+    <div class="pop-up-container">
+
+        <div class="box-golden-top"></div>
+        <div class="pop-up-header"><span class="golden"> Закажите идеальный автомобиль </span> уже сегодня</div>
+
+        <div class="details">
+            <form id="order-form-id">
+
+                <div class="details-header">Детали проката</div>
+
+                <div class="details-info">1. Данные заявки</div>
+                <div class="select-car">
+
+
+                    <select class="border" id="select-car" name="" >
+                        <option value="" disabled selected>Выберите машину</option>
+
+                        <option>Lamborghini Aventador SVJ</option>
+                        <option>Lamborghini SVJ</option>
+                        <option> Lamborghini HURACÁN</option>
+                        <option> Lamborghini URUS</option>
+                    </select>
+
+                    <img alt="arrow-down" src="images/down-arrow.png">
+
+                    <div class="error"> Выберите машину</div>
+                </div>
+
+                <div class="select-time">
+                    <input class="border" id="from" name="from" placeholder="Начало" type="text">
+                    <input class="border" id="until" name="until" placeholder="Окончание" type="text">
+                    <div class="error"> Выберите Начало и Окончание аренды</div>
+                </div>
+
+                <div class="select-info" id="id-destination">
+                    <input class="border" id="destination" name="destination" placeholder="Откуда поедете" type="text">
+                    <div class="error"> Выберите Откуда поедете</div>
+                </div>
+
+                <div class="details-info">2. Личная информация</div>
+
+                <div class="select-info"><input class="border" id="fill-up-name" name="name" placeholder="Ваше имя" type="text">
+                <div class="error"> Заполните поле "Ваше имя"</div>
+                </div>
+
+                <div class="select-info"><input class="border" id="fill-up-phone" name="phone" placeholder="Ваш телефон" type="text">
+
+                <div class="error"> Заполните поле "Ваш телефон"</div>
+        </div>
+
+                <div class="select-info" id="id-select-info"><input class="border" id="email" name="email" placeholder="Ваш e-mail"
+                                                                    type="email">
+                <div class="error"> Заполните поле "Ваш e-mail"</div>
+                </div>
+
+                <div class="details-info">3. Сообщение</div>
+
+                <div class="select-info" id="id-message">
+                    <textarea id="message" name="message" placeholder="Введите ваше сообщение (не обязательно)"
+                              rows="4"></textarea>
+                </div>
+
+
+                <button class="btn-pop-up" id="order-form-btn" type="submit">Отправить заявку</button>
+
+
+                <div class="rights">Предоставляя информацию, вы даете согласие на обработку вашей личной информации в
+                    соответствии с нашей политикой конфиденциальности
+                </div>
+
+            </form>
+        </div>
+
+        <div class="message">
+            Спасибо за Вашу заявку. Мы свяжемся с вами в ближайшее время!
+        </div>
+
+        <div class="box-golden-bottom"></div>
+
+    </div>
+</div>
+
+<!--pop-up "Rent car"-->
+
+<div class="pop-up" id="car">
+    <div class="pop-up-container">
+
+        <div class="box-golden-top"></div>
+        <div class="pop-up-header"><span class="golden"> Закажите идеальный автомобиль </span> уже сегодня</div>
+
+        <div class="details">
+            <form id="car-form">
+
+
+                <div class="details-header">Детали проката</div>
+
+                <div class="details-info">1. Данные заявки</div>
+                <div class="select-car">
+
+
+                    <select class="border" id="car-select" name="">
+                        <option value="" disabled selected>Выберите машину</option>
+
+                        <option>Lamborghini Aventador SVJ</option>
+                        <option>Lamborghini SVJ</option>
+                        <option> Lamborghini HURACÁN</option>
+                        <option> Lamborghini URUS</option>
+                    </select>
+
+                    <img alt="arrow-down" src="images/down-arrow.png">
+
+                    <div class="error"> Выберите машину</div>
+                </div>
+
+                <div class="select-time">
+                    <input class="border" id="carFrom" name="car-from" placeholder="Начало" type="text">
+                    <input class="border"  id="carUntil" name="car-until" placeholder="Окончание" type="text">
+                    <div class="error"> Выберите Начало и Окончание аренды</div>
+                </div>
+
+                <div class="select-info" id="car-id-destination">
+                    <input class="border" id="car-destination" name="destination" placeholder="Откуда поедете" type="text">
+                    <div class="error"> Выберите Откуда поедете</div>
+                </div>
+
+                <div class="details-info">2. Личная информация</div>
+
+                <div class="select-info"><input class="border" id="car-fill-up-name" name="name" placeholder="Ваше имя" type="text">
+                <div class="error"> Заполните поле "Ваше имя"</div>
+                </div>
+
+                <div class="select-info"><input class="border" id="car-fill-up-phone" name="phone" placeholder="Ваш телефон" type="text">
+
+                <div class="error"> Заполните поле "Ваш телефон"</div>
+        </div>
+
+                <div class="select-info" id="car-id-select-info"><input class="border" id="car-email" name="email" placeholder="Ваш e-mail"
+                                                                    type="email">
+                <div class="error"> Заполните поле "Ваш e-mail"</div>
+                </div>
+
+                <div class="details-info">3. Сообщение</div>
+
+                <div class="select-info" id="car-id-message">
+                    <textarea id="car-message" name="message" placeholder="Введите ваше сообщение (не обязательно)"
+                              rows="4"></textarea>
+                </div>
+
+
+                <button class="btn-pop-up" id="car-form-btn" type="submit">Отправить заявку</button>
+
+
+                <div class="rights">Предоставляя информацию, вы даете согласие на обработку вашей личной информации в
+                    соответствии с нашей политикой конфиденциальности
+                </div>
+
+            </form>
+        </div>
+
+        <div class="message">
+            Спасибо за Вашу заявку. Мы свяжемся с вами в ближайшее время!
+        </div>
+
+        <div class="box-golden-bottom"></div>
+
+    </div>
+</div>
+
+
+<header class="menu">
+    <div class="container">
+
+        <div class="menu-item logo">
+            <img alt="logo" src="images/logo.png">
+        </div>
+
+        <ul class="menu-full">
+
+            <li class="menu-item">
+                <a href="#main-id">ГЛАВНАЯ</a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#options-id">АВТОПАРК</a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#info-id">УСЛОВИЯ ПРОКАТА</a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#footer-id">КОНТАКТЫ</a>
+            </li>
+
+        </ul>
+
+        <button class="nav-open" id="nav-open">
+            <img alt="burger" src="images/nav-menu.png">
+        </button>
+
+        <nav class="menu-nav">
+
+            <div class="menu-body">
+                <div class="box-golden-top"></div>
+
+                <div class="nav-items">
+
+                    <div class="nav-list">
+                        <div class="pop-up-header"><span class="golden"> МЕНЮ </span></div>
+
+                        <ul>
+                            <li class="nav-item">
+                                <a href="#main-id">ГЛАВНАЯ</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#options-id">АВТОПАРК</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#info-id">УСЛОВИЯ ПРОКАТА</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#footer-id">КОНТАКТЫ</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                    <button class="nav-close" id="nav-close">
+                        <img alt="cancel" src="images/nav-cancel.png">
+                    </button>
+
+                </div>
+
+                <div class="box-golden-bottom"></div>
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="main">
+    <div class="container">
+
+        <div class="main-header" id="main-id">
+            САМЫЙ ПРОСТОЙ И БЫСТРЫЙ СПОСОБ АРЕНДЫ <span class="golden"> LAMBORGHINI <br>В МОНАКО </span>
+        </div>
+        <div class="main-text">
+            При условии аренды автомобиля <br> от 7 дней — скидка 20%
+        </div>
+
+        <div class="main-auto">
+            <img alt="main-auto" src="images/auto-main.png">
+        </div>
+
+        <div class="main-header-promo">
+            <span class="golden"> ЛЕГЕНДАРНЫЕ LAMBORGHINI </span> ДЛЯ ЛЕГЕНДАРНЫХ ЛЮДЕЙ
+        </div>
+
+        <div class="bl-1 wow animate__lightSpeedInRight">
+
+            <div class="main-promo-block-one">
+                <div class="box"></div>
+                Пощеголяйте на улицах Монако
+            </div>
+
+            <div class="main-article-block-one">
+                За рулем одного из наших Lamborghini в Монако вы непременно привлечете к себе взгляды
+                окружающих.
+                <span class="golden"> Выберите Lamborghini </span> Huracan в ярко зеленой окраске, оснащенный
+                10-цилиндровым двигателем, или купе
+                Lamborghini Aventador, 12-цилиндровый двигатель которого позволяет развивать <span
+                    class="golden"> мощность 700 л.с. </span>
+                Свирепый Aventador словно пересекает границы времени, разгоняясь до сотни всего за 2,9 секунды.
+                Но
+                будьте повнимательнее — незаметно достигнув максимальных 350 км/ч, вы рискуете заработать штраф.
+                Этот
+                автомобиль мечты арендуется примерно за 1200 $ в сутки. Откиньте верх этого автомобиля и <span
+                    class="golden"> насладитесь
+                вниманием </span> окружающих к вашей персоне.
+            </div>
+
+            <div class="bl-1-pic">
+                <img alt="man" src="images/main-man.png">
+            </div>
+        </div>
+
+
+        <div class="bl-2 wow animate__lightSpeedInLeft">
+
+            <div class="bl-2-pic">
+                <img alt="car" src="images/main-car.png">
+            </div>
+
+            <div>
+                <div class="main-promo-block-two">
+                    <div class="box"></div>
+                    Ночная поездка на Lamborghini Aventador
+                </div>
+
+                <div class="main-article-block-two">
+                    <span class="golden"> Превратите Lamborghini Aventador в своего гида </span> по лучшим барам и
+                    ресторанам Монако. Разнообразие и смесь
+                    культур четко улавливаются в этом городе: декор в английском или южно-африканском стиле, живая
+                    музыка
+                    или пластинки с электронными ритмами. Общая черта здешних ночных заведений лишь одна — они все
+                    открыты
+                    от заката до рассвета. <span class="golden"> Арендуя Lamborghini в Монако, </span> помните слова
+                    великой Коко Шанель: «Лучшие в жизни
+                    вещи достаются нам бесплатно, а роскошные — дорого». Только помните: все эти штрафы, привезенные из
+                    Монако - это всего лишь сувениры.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="info wow animate__flash">
+    <div class="container">
+        <div class="info-box">
+            <div class="info-header" id="info-id">
+                <span class="golden"> КАК АРЕНДОВАТЬ </span> Lamborghini В МОНАКО?
+            </div>
+
+            <div class="info-text">
+                Самый простой и быстрый способ <span class="golden"> чтоб забронировать автомобиль </span> - позвонить
+                нам и
+                задать все интересующие вас
+                вопросы. Либо выберите понравившийся вам автомобиль на нашем сайте, <span class="golden"> заполните специальную форму и ждите
+            звонка </span> от наших представителей. Наши консультанты проинформируют вас относительно стоимости и
+                необходимых
+                документов для аренды.
+            </div>
+
+            <div class="btn-info">
+
+                <button class="btn" id="order-call">
+                    Заказать звонок
+                </button>
+
+                <button class="btn" id="fill-form">
+                    Заполнить форму
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="promo wow animate__lightSpeedInRight">
+    <div class="container">
+        <div class="promo-header-title">
+            <span class="golden"> Преимущества </span> аренды у нас
+        </div>
+
+        <div class="promo-adv">
+
+            <div class="promo-adv-item">
+
+                <div class="pr-hd">
+
+                    <div class="promo-img">
+                        <img alt="plane" src="images/icon-airport.png">
+                    </div>
+
+                    <div class="promo-header">
+                        Доставка в аэропорт или к отелю
+                    </div>
+                </div>
+
+                <div class="promo-text">
+                    Доставим автомобиль на любой удобный для вас адрес
+                </div>
+
+                <div class="promo-text-two">
+                    Можете вернуть автомобиль в любом городе или стране
+                </div>
+
+            </div>
+
+            <div class="promo-adv-item">
+                <div class="pr-hd">
+
+                    <div class="promo-img">
+                        <img alt="visa" src="images/icon-visa.png">
+                    </div>
+
+                    <div class="promo-header">
+                        Гибкие условия оплаты
+                    </div>
+                </div>
+
+                <div class="promo-text">
+                    Вы можете сделать предоплату онлайн или оплатить наличными
+                </div>
+
+                <div class="promo-text-two">
+                    Отсутствие скрытых платежей и комиссий
+                </div>
+
+            </div>
+
+            <div class="promo-adv-item">
+                <div class="pr-hd">
+                    <div class="promo-img">
+                        <img alt="person" src="images/icon-inquiry.png">
+                    </div>
+
+                    <div class="promo-header">
+                        Поддержка 24/7 после бронирования
+                    </div>
+
+                </div>
+
+                <div class="promo-text">
+                    Круглосуточная помощь и консультация по любому вопросу
+                </div>
+
+                <div class="promo-text-two">
+                    Профессиональная поддержка на разных иностранных языках
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="options wow animate__lightSpeedInLeft">
+    <div class="container">
+        <div class="options-header" id="options-id">
+            НАШ <span class="golden"> АВТОПАРК </span>
+        </div>
+
+        <div class="options-prev-arrow">
+            <img alt="Previous" src="images/backword.png">
+        </div>
+        <div class="options-next-arrow">
+            <img alt="Next" src="images/next.png">
+        </div>
+
+        <div class="option-pic">
+
+
+            <div class="option-car">
+
+                <img alt="auto" src="images/option-car1.png">
+                <div class="nameAndPrice">
+                    <div>
+                        <div class="option-name">
+                            Lamborghini Aventador SVJ
+                        </div>
+
+                        <div class="option-price">
+                            Стоимость аренды в сутки: 1 280 $
+                        </div>
+                    </div>
+                    <div class="btn" id="order-car-js">
+                        Арендовать авто
+                    </div>
+                </div>
+            </div>
+
+            <div class="option-car">
+                <img alt="auto" src="images/option-car2.png">
+                <div class="nameAndPrice">
+                    <div>
+                        <div class="option-name">
+                            Lamborghini HURACÁN
+                        </div>
+
+                        <div class="option-price">
+                            Стоимость аренды в сутки: 2 210 $
+                        </div>
+                    </div>
+                    <div class="btn order-car-js">
+                        Арендовать авто
+                    </div>
+                </div>
+            </div>
+
+            <div class="option-car">
+                <img alt="auto" src="images/option-car3.png">
+                <div class="nameAndPrice">
+                    <div>
+                        <div class="option-name">
+                            Lamborghini URUS
+                        </div>
+
+                        <div class="option-price">
+                            Стоимость аренды в сутки: 1 090 $
+                        </div>
+                    </div>
+                    <div class="btn order-car-js">
+                        Арендовать авто
+                    </div>
+                </div>
+            </div>
+            <div class="option-car">
+                <img alt="auto" src="images/option-car4.png">
+                <div class="nameAndPrice">
+                    <div>
+                        <div class="option-name">
+                            Lamborghini Aventador SVJ
+                        </div>
+
+                        <div class="option-price">
+                            Стоимость аренды в сутки: 1 420 $
+                        </div>
+                    </div>
+                    <div class="btn order-car-js">
+                        Арендовать авто
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<div class="review">
+    <div class="container">
+        <div class="review-header">
+            <span class="golden">Что говорят </span> наши клиенты
+        </div>
+
+        <div class="review-people">
+
+            <div class="review-slider">
+
+                <div class="review-card">
+
+                    <div class="top">
+                        <div class="pic">
+                            <img alt="avatar" src="images/face1.png">
+                        </div>
+
+                        <div class="name">
+                            Алексей
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        Это было круто и незабываемо! Шикарные машины, которые только радуют, очень дружелюбный
+                        персонал. Я
+                        выбрал то, <br> нужно и в полном восторге. Спасибо!
+                    </div>
+
+                </div>
+
+                <div class="review-card">
+
+                    <div class="top">
+                        <div class="pic">
+                            <img alt="avatar" src="images/face3.png">
+                        </div>
+
+                        <div class="name">
+                            Иван
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        Если и есть самое лучшее место и крутыми машинами, то это однозначно здесь! <br>Получил огромное
+                        удовольствия за время аренды. Рекомендую безусловно.
+                    </div>
+
+                </div>
+
+                <div class="review-card">
+
+                    <div class="top">
+                        <div class="pic">
+                            <img alt="avatar" src="images/face2.png">
+                        </div>
+
+                        <div class="name">
+                            Дмитрий
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        Очень понравились машины и сервис. Все настолько схвачено и на столько человечно. Я в восторге!
+                    </div>
+
+                </div>
+
+                <div class="review-card">
+
+                    <div class="top">
+                        <div class="pic">
+                            <img alt="avatar" src="images/face4.jpg">
+                        </div>
+
+                        <div class="name">
+                            Ксения
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        Шикарное авто очень советую всем. Скорость просто захватывает дух! Разгоняется с 0 до 100 за
+                        секунду.
+                    </div>
+
+                </div>
+                <div class="review-card">
+
+                    <div class="top">
+                        <div class="pic">
+                            <img alt="avatar" src="images/face5.jpg">
+                        </div>
+
+                        <div class="name">
+                            Константин
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        Арендовала Lamborghini для небольшой поездки, и осталась очень довольна. Удобное бронирование
+                        онлайн, приветливый персонал, и, конечно же, красивая и мощная машина! Спасибо!
+                    </div>
+
+                </div>
+
+                <div class="review-card">
+
+                    <div class="top">
+                        <div class="pic">
+                            <img alt="avatar" src="images/face6.jpg">
+                        </div>
+
+                        <div class="name">
+                            Федора
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        Это был мой первый опыт аренды машины, и я выбрал Lamborghini. Не могу быть счастливее! Процесс
+                        аренды был легким, автомобиль был чистым и готовым к поездке. Буду рекомендовать друзьям!
+                    </div>
+
+                </div>
+
+                <div class="review-card">
+
+                    <div class="top">
+                        <div class="pic">
+                            <img alt="avatar" src="images/face7.jpg">
+                        </div>
+
+                        <div class="name">
+                            Максим
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        Никогда не думала, что аренда машины может быть таким приятным! Сотрудники компании Lamborghini
+                        делают все, чтобы клиент чувствовал себя важным. Очень довольна!
+                    </div>
+
+                </div>
+
+                <div class="review-card">
+
+                    <div class="top">
+                        <div class="pic">
+                            <img alt="avatar" src="images/face8.jpg">
+                        </div>
+
+                        <div class="name">
+                            Саша
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        Прекрасный опыт аренды Lamborghini здесь! Вежливый персонал, удобное расположение, и, конечно,
+                        потрясающие автомобили. Рекомендую!
+                    </div>
+
+                </div>
+
+                <div class="review-card">
+
+                    <div class="top">
+                        <div class="pic">
+                            <img alt="avatar" src="images/face9.jpg">
+                        </div>
+
+                        <div class="name">
+                            Василий
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        Очень понравилось арендовать Lamborghini в этой компании. Процесс аренды был простым и быстрым,
+                        машина была в отличном состоянии. Обязательно вернусь сюда снова!
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="review-prev-arrow">
+                <img alt="Previous" src="images/backword.png">
+            </div>
+            <div class="review-next-arrow">
+                <img alt="Next" src="images/next.png">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="contacts">
+    <div class="container">
+
+        <div class="contacts-header">
+            Как нас <span class="golden"> найти </span>
+        </div>
+
+        <div class="contact-flex">
+
+            <div class="left">
+
+
+                <div class="contacts-info">
+                    Scuderia Monte-Carlo, 5 Avenue, Monaco
+                </div>
+
+                <div class="contacts-info">
+                    +44 220 320 4030
+                </div>
+
+                <div class="contacts-info">
+                    reservations@carental.com
+                </div>
+            </div>
+
+            <div class="right">
+                <img alt="map" src="images/contacts-map.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer" id="footer-id">
+    <div class="container">
+        <div class="left">
+
+            <div class="logo">
+                <img alt="logo" src="images/logo.png">
+            </div>
+
+            <div class="social">
+
+                <div class="social-logo">
+                    <img alt="FB" src="images/fb.png">
+                </div>
+
+                <div class="social-logo">
+                    <img alt="insta" src="images/insta.png">
+                </div>
+
+                <div class="social-logo">
+                    <img alt="linkedin" src="images/lkd.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="center">
+            <div class="footer-schedule">
+                Часы работы
+            </div>
+
+            <div class="footer-flex">
+
+                <div class="footer-info">
+
+                    <div class="footer-days">
+                        Понедельник - пятница
+                    </div>
+
+                    <div class="footer-days">
+                        8:00 - 19:00
+                    </div>
+
+                </div>
+
+                <div class="footer-info">
+
+                    <div class="footer-help">
+                        Помощь на дороге
+                    </div>
+
+                    <div class="footer-help">
+                        Круглосуточно
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="right-header">
+                Свяжитесь с нами
+            </div>
+
+            <div class="right-info">
+                <img alt="phone" src="images/phone.png">
+                <p class="right-style"> +44 220 320 4030</p>
+            </div>
+
+            <div class="right-info">
+                <img alt="email" src="images/email.png">
+                <p class="right-style"> reservations@carental.com </p>
+            </div>
+
+            <div class="right-info">
+                <img alt="address" src="images/map-sign.png">
+                <p class="right-style"> Scuderia Monte-Carlo, 5 Avenue, Monaco </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="scripts/jquery-3.7.1.min.js" type="text/javascript"></script>
+<script src="scripts/slick.min.js" type="text/javascript"></script>
+<script src="scripts/wow.min.js"></script>
+<script src="scripts/index.js"></script>
+
+</body>
+</html>
